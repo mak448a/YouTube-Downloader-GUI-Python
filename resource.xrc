@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwidgets.org/wxxrc" version="2.5.3.0">
+	<object class="wxFrame" name="mainFrame">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>600,300</size>
+		<title>YouTube Downloader</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxPanel" name="m_panel5">
+			<style>wxTAB_TRAVERSAL</style>
+			<object class="wxBoxSizer">
+				<orient>wxVERTICAL</orient>
+				<object class="spacer">
+					<option>1</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<size>0,0</size>
+				</object>
+				<object class="sizeritem">
+					<option>0</option>
+					<flag>wxALL|wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxStaticText" name="m_staticText4">
+						<style>wxALIGN_CENTER_HORIZONTAL</style>
+						<size>-1,30</size>
+						<font>
+							<size>20</size>
+							<style>normal</style>
+							<weight>normal</weight>
+							<underlined>0</underlined>
+						</font>
+						<label>YouTube Downloader</label>
+						<wrap>-1</wrap>
+					</object>
+				</object>
+				<object class="spacer">
+					<option>1</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<size>0,0</size>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxALIGN_CENTER|wxALL</flag>
+					<border>5</border>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER|wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="wxStaticText1">
+								<label>YouTube link: </label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER|wxALL</flag>
+							<border>5</border>
+							<object class="wxTextCtrl" name="link">
+								<size>150,-1</size>
+								<value></value>
+							</object>
+						</object>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxALIGN_CENTER</flag>
+					<border>5</border>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER|wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="wxStaticText">
+								<label>Quality</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER|wxALL</flag>
+							<border>5</border>
+							<object class="wxComboBox" name="quality">
+								<value>720p</value>
+								<content>
+									<item>Best</item>
+									<item>4K</item>
+									<item>1080p</item>
+									<item>720p</item>
+									<item>360p</item>
+									<item>144p</item>
+								</content>
+							</object>
+						</object>
+					</object>
+				</object>
+				<object class="spacer">
+					<option>1</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<size>0,0</size>
+				</object>
+				<object class="sizeritem">
+					<option>0</option>
+					<flag>wxALIGN_CENTER|wxALL</flag>
+					<border>5</border>
+					<object class="wxButton" name="submit">
+						<label>Download</label>
+						<default>0</default>
+						<auth_needed>0</auth_needed>
+						<markup>0</markup>
+						<bitmap />
+					</object>
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="status">
+			<style>wxSTB_SIZEGRIP</style>
+			<fields>1</fields>
+		</object>
+	</object>
+</resource>

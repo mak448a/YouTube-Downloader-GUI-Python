@@ -2,3 +2,5 @@ venv
 build
 dist
 dist_data
+unimportant
+.idea
