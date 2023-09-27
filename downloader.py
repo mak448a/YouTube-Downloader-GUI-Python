@@ -62,7 +62,7 @@ class MyApp(wx.App):
         info.Copyright = "(c) 2023 mak448a"
         info.Description = "A simple video downloader created by mak448a."
         info.WebSite = ("https://mak448a.github.io", "mak448a's homepage")
-        info.Developers = ["mak448a"]
+        info.Developers = ["mak448a", "yt-dlp Contributors", "Python® Contributors"]
 
         info.SetIcon(wx.Icon("icon.png"))
         # print(info.HasIcon())
