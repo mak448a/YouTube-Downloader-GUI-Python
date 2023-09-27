@@ -1,5 +1,6 @@
 import wx
 from wx import xrc
+import wx.adv
 import subprocess
 import threading
 
@@ -23,7 +24,7 @@ class MyApp(wx.App):
         self.submit = xrc.XRCCTRL(self.frame, "submit")
         self.combo_box = xrc.XRCCTRL(self.frame, "quality")
         self.link = xrc.XRCCTRL(self.frame, "link")
-        # self.frame.SetIcon(wx.Icon("icon.ico"))
+        self.frame.SetIcon(wx.Icon("icon.png"))
         self.status_bar = xrc.XRCCTRL(self.frame, "status")
         self.quit_button = xrc.XRCCTRL(self.frame, "quit_item")
 
@@ -48,13 +49,29 @@ class MyApp(wx.App):
 
     @staticmethod
     def on_about_box(_):
-        wx.MessageBox("This program is licensed under the MIT license.\n\nAuthor: mak448a\n"
-                      "Made with: yt-dlp, Python®, pyinstaller\n"
-                      "Python License: https://opensource.org/steward/python-software-foundation/" +
-                      '\n"Python" is a registered trademark of the Python Software Foundation.\n' +
-                      "All licenses for this project are available in the licenses folder."+
-                      "\nYou can use \"ALT+H, A\" to access this menu again.",
-                      "About", wx.OK | wx.ICON_INFORMATION)
+        # wx.MessageBox("This program is licensed under the MIT license.\n\nAuthor: mak448a\n"
+        #               "Made with: yt-dlp, Python®, pyinstaller\n"
+        #               "Python License: https://opensource.org/steward/python-software-foundation/" +
+        #               '\n"Python" is a registered trademark of the Python Software Foundation.\n' +
+        #               "All licenses for this project are available in the licenses folder."+
+        #               "\nYou can use \"ALT+H, A\" to access this menu again.",
+        #               "About", wx.OK | wx.ICON_INFORMATION)
+        info = wx.adv.AboutDialogInfo()
+        info.Name = "YouTube Downloader"
+        info.Version = "0.0.1"
+        info.Copyright = "(c) 2023 mak448a"
+        info.Description = "A simple video downloader created by mak448a."
+        info.WebSite = ("https://mak448a.github.io", "mak448a's homepage")
+        info.Developers = ["mak448a"]
+
+        info.SetIcon(wx.Icon("icon.png"))
+        # print(info.HasIcon())
+
+        with open("LICENSE") as f:
+            info.License = f.read()
+
+        # Then we call wx.AboutBox giving it that info object
+        wx.adv.AboutBox(info)
 
     def on_quit(self, _):
         self.frame.Close()
